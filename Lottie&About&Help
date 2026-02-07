@@ -1,0 +1,138 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" data-no-defer="1"></script>
+<script>
+(function(){
+  try{
+    lottie.loadAnimation({container: document.getElementById('lottie-hero'),renderer: 'svg', loop: false, autoplay: true,path: 'https://adriankordowski.pl/wp-content/uploads/2025/11/ANIMACJA-1.json'});
+  }catch(e){ console.error(e); }
+
+  const copy = document.querySelector('.copy');
+  const heroSub = document.querySelector('.hero-sub');
+  const heroTags = document.querySelector('.hero-tags');
+  const ctaDesktop = document.querySelector('.hero-cta-desktop');
+  const ctaMobile = document.querySelector('.hero-cta-mobile');
+  const lottieWrap = document.querySelector('.lottie-wrap');
+  const metrics = document.querySelector('.metrics');
+  const mediaAside = document.querySelector('.hero-media');
+
+  function place(){
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    
+    // Pobieramy nagłówek H1 (żeby wiedzieć, gdzie wstawiać)
+    const h1 = copy.querySelector('h1');
+
+    if(isMobile){
+      // --- LOGIKA MOBILNA: Hard Skills wysoko, Opis nisko ---
+
+      // 1. Animacja (Lottie) - wstawiamy zaraz pod H1
+      if(h1 && !copy.contains(lottieWrap)) {
+          h1.after(lottieWrap);
+      } else if (h1 && lottieWrap) {
+          h1.after(lottieWrap); // Upewniamy się
+      }
+
+      // 2. Tagi (Hard Skills) - wstawiamy pod Animacją
+      if(lottieWrap && heroTags) {
+          lottieWrap.after(heroTags);
+      }
+
+      // 3. Licznik (Metrics) - wstawiamy pod Tagami
+      if(heroTags && metrics) {
+          heroTags.after(metrics);
+      }
+
+      // 4. Przyciski (CTA) - wstawiamy pod Licznikiem
+      if(metrics && ctaMobile) {
+          metrics.after(ctaMobile);
+      }
+
+      // 5. Opis (heroSub) - NA SAMYM DOLE (po przyciskach)
+      if(ctaMobile && heroSub) {
+          ctaMobile.after(heroSub);
+      }
+
+    } else {
+      // --- LOGIKA DESKTOP: Przywracamy standardowy układ ---
+      
+      // Lottie i Metrics wracają na prawo (do mediaAside)
+      if(!mediaAside.contains(lottieWrap)) mediaAside.prepend(lottieWrap);
+      if(!mediaAside.contains(metrics)) mediaAside.appendChild(metrics);
+      
+      // Tagi wracają nad przyciski (przed ctaDesktop)
+      if(ctaDesktop && heroTags){
+         copy.insertBefore(heroTags, ctaDesktop);
+      }
+      
+      // Opis wraca zaraz pod H1 (czyli przed tagi)
+      if(h1 && heroSub) {
+         h1.after(heroSub);
+      }
+    }
+  }
+
+  place();
+  window.addEventListener('resize', place);
+
+  const el = document.querySelector('.counter');
+  if(el){
+    const target = Number(el.dataset.target || 50);
+    const suffix = el.dataset.suffix || 'M+';
+    const obs = new IntersectionObserver(([ent])=>{
+      if(!ent.isIntersecting) return;
+      obs.disconnect();
+      const dur = 1600, start = performance.now();
+      function tick(t){
+        const p = Math.min(1,(t-start)/dur);
+        const eased = 0.5 - 0.5*Math.cos(Math.PI*p);
+        const val = Math.round(target * (0.08 + 0.92*eased));
+        el.textContent = '€' + val + suffix;
+        if(p<1) requestAnimationFrame(tick); else el.textContent = '€' + target + suffix;
+      }
+      requestAnimationFrame(tick);
+    },{threshold:0.6});
+    obs.observe(el);
+  }
+  const form = document.querySelector('form.form');
+  if(form){
+    const email = form.querySelector('input[name="email"]');
+    const replyHidden = form.querySelector('input[name="_replyto"]');
+    if(email && replyHidden){
+      email.addEventListener('input', ()=>{ replyHidden.value = email.value; });
+    }
+  }
+})();
+</script>
+
+<section id="about" class="section">
+  <div class="container grid-2">
+    <div>
+      <h2>Who I am</h2>
+      <img class="avatar" loading="lazy" decoding="async" src="https://placehold.co/184x184/jpg?text=Your+photo" alt="Portrait of Adrian Kordowski" />
+      <p>Hello!</p>
+      <p>I’m Adrian — a business and data enthusiast who loves turning ideas into actionable plans. During my studies, I led a student science club, organizing meetings with entrepreneurs. We lifted the curtain on the business world and raised funds for children’s homes before Christmas. Those experiences sparked my passion for entrepreneurship and analytics.</p>
+      <p>I’m passionate about ESG — <em>Environmental, Social and Governance</em> — not only as a framework for risk and opportunity in investing, but as a way to balance profit with environmental and social impact in practice.</p>
+      <p>I’ve prepared comprehensive business plans and funding applications — from ambitious multi-million-euro ideas to leaner ventures. In one project, a client insisted on very optimistic forecasts; I advised more conservative projections, but ultimately built the plan to their specifications. It taught me to separate my judgment from client requirements and keep honing my financial analysis skills. After each project I reflect on what worked, what didn’t, and how to improve.</p>
+      <p>For me, building a business is more than just making money — I see beauty in the process. It’s a form of art — where a vision is crafted into reality, like a painter creating a masterpiece. I love it.</p>
+      <p>Personally, I’m a bit of a nerd in the best sense — I love new tech, psychology and how people think. I enjoy games (LoL, MMORPGs — I played Nostale for nearly 10 years), good coffee and exploring local restaurants. I tinker with AI tools and even brain-sensing (Muse S) to understand and optimize how I work.</p>
+      <p class="quote">A story that shaped me: while working a summer job in Germany, I helped a local politician fix his router — without speaking German. He invited me to the state parliament, where I met the president; we chatted briefly, and later I joined his family for dinner. It reminded me that initiative, curiosity and empathy are noticed — regardless of language.</p>
+    </div>
+    <aside class="about-aside">
+      <div class="figure" aria-label="Parliament visit photo">
+        <img loading="lazy" decoding="async" src="https://adriankordowski.pl/wp-content/uploads/2025/11/politics.jpg" alt="Photo from a visit to the regional parliament in Germany" />
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="help" class="section">
+  <div class="container">
+    <h2>I can help you with</h2>
+    <div class="grid-3" style="margin-top:16px">
+      <div class="card"><h3>ESG & Responsible Investment</h3><p>Research, practical frameworks and decisions that balance profit with environmental and social impact.</p></div>
+      <div class="card"><h3>Financial & Business Analysis</h3><p>Building budgets, cash-flow forecasts and ROI analyses using Excel and Power BI, turning numbers into actionable insights.</p></div>
+      <div class="card"><h3>Process Improvement</h3><p>From factory floor ideas to office ops — identify bottlenecks, reduce friction, make work smoother.</p></div>
+      <div class="card"><h3>AI-powered prototyping & automation</h3><p>Use AI to structure research, explore scenarios and accelerate delivery — with human judgment at the end.</p></div>
+      <div class="card"><h3>Excel & Power BI</h3><p>Dashboards, tidy models and visuals that make numbers easy to discuss and act on. Advanced Excel: VLOOKUP, PivotTables.</p></div>
+      <div class="card"><h3>Continuous Learning</h3><p>Not a senior yet — learning fast, asking good questions and working best in a driven team, seeking mentorship, always refining my approach.</p></div>
+    </div>
+  </div>
+</section>
