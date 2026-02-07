@@ -283,8 +283,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
     lottie.loadAnimation({
         container: document.getElementById('lottie-hero'),
         renderer: 'svg', loop: false, autoplay: true,
-        /* TUTAJ WKLEJ SWÓJ LINK DO ANIMACJI JSON */
-        path: 'LINK_DO_PLIKU_JSON'
+        path: 'https://adriankordowski.pl/wp-content/uploads/2025/11/ANIMACJA-1.json'
     });
   }catch(e){ console.error(e); }
 
