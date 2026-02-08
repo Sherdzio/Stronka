@@ -117,7 +117,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
   gap: 12px;
   width: max-content; 
   /* Animacja */
-  animation: marquee 40s linear infinite; /* Wolniejsza = płynniejsza */
+  animation: marquee 50s linear infinite; /* Wolniejsza = płynniejsza */
   /* Usunąłem pause-on-hover, żeby płynęło zawsze */
 }
 
@@ -444,7 +444,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
     </div>
     <aside class="about-aside">
       <div class="figure" aria-label="Parliament visit photo">
-        <img loading="lazy" decoding="async" src="" alt="Photo from a visit to the regional parliament in Germany" />
+        <img loading="lazy" decoding="async" src="https://adriankordowski.pl/wp-content/uploads/2025/11/politics.jpg" alt="Photo from a visit to the regional parliament in Germany" />
       </div>
     </aside>
   </div>
@@ -474,7 +474,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
       <article class="project">
         <div class="project-header">
           <div class="project-icon-wrap" style="--ox:-2px;--oy:-3px;" aria-label="Icon for innovative toy venture">
-            <img src="" alt="Icon" />
+            <img src="https://adriankordowski.pl/wp-content/uploads/2025/12/icon1_cropped.png" alt="Icon" />
           </div>
           <strong>High-risk Toy Venture — Critical Financial & Operational Analysis</strong>
         </div>
@@ -482,7 +482,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
         <p>I rebuilt the entire market, cost and logistics model from scratch, iterating it more than ten times to keep it internally consistent while clearly documenting why the input assumptions remained unrealistic for any serious investor.</p>
         <p class="small"><span class="label">Key metrics:</span> ~270h analysis · &lt;2 pages initial data · 50M+ units &amp; 200k/day sales assumption (client-driven).</p>
         <p class="small"><span class="label">Lesson:</span> separate professional judgment from client expectations, and keep your modeling standards even when the numbers you're given don't add up.</p>
-        <a class="view-link" href="LINK_DO_PDF_1" target="_blank" rel="noopener">
+        <a class="view-link" href="https://adriankordowski.pl/wp-content/uploads/2025/11/Businessplan-Adrian-Kordowski.pdf" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           view full business plan (PDF)
         </a>
@@ -491,14 +491,14 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
       <article class="project">
         <div class="project-header">
           <div class="project-icon-wrap" style="--ox:-1px;--oy:-4px;" aria-label="Icon for self-storage project">
-            <img src="" alt="Icon" />
+            <img src="https://adriankordowski.pl/wp-content/uploads/2025/12/icon3_cropped.png" alt="Icon" />
           </div>
           <strong>Self-Storage Venture — Full Case Study</strong>
         </div>
         <p>Advanced to Phase 2 with a maximum innovation score after building the concept end-to-end: market research, strategy, business plan, and financial model.</p>
         <p>The case study shows how I built the business case end-to-end — and how I’d strengthen the evidence layer today (benchmarking, assumptions, and financial validation) to make it investor-ready.</p>
         <p class="small"><span style="color:var(--accent); font-weight:600">Key metrics:</span> competitor footprint &amp; density, price bands by location, staffing model per site, digital acquisition intensity.<br><span style="color:var(--accent); font-weight:600">Lesson:</span> research must go beyond desk data — benchmarking top players reveals what actually drives performance and where the inefficiencies hide.</p>
-        <a class="view-link" href="LINK_DO_PDF_2" target="_blank" rel="noopener">
+        <a class="view-link" href="https://adriankordowski.pl/wp-content/uploads/2026/01/Self-Storage_Case_Study_Adrian-Kordowski_v2.pdf" target="_blank" rel="noopener">
           <span aria-hidden="true">→</span> view full case study (PDF)
         </a>
       </article>
@@ -506,7 +506,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
       <article class="project">
         <div class="project-header">
           <div class="project-icon-wrap" style="--ox:-4px;--oy:-2px;" aria-label="Icon for modular houses project">
-            <img src="" alt="Icon" />
+            <img src="https://adriankordowski.pl/wp-content/uploads/2025/12/icon2_cropped.png" alt="Icon" />
           </div>
           <strong>Modular Housing — Strategic R&D & Efficiency Analysis</strong>
         </div>
@@ -535,7 +535,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
                 <span class="bento-title">Reflections</span>
             </div>
             <p class="bento-desc">My thoughts, lessons, and conclusions from projects.</p>
-            <a class="bento-link" href="LINK_DO_PDF_REFLECTIONS" target="_blank" rel="noopener">Get PDF <span>→</span></a>
+            <a class="bento-link" href="https://adriankordowski.pl/wp-content/uploads/2026/01/PROJECT.pdf" target="_blank" rel="noopener">Get PDF <span>→</span></a>
         </article>
 
         <article class="bento-card">
@@ -557,7 +557,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
                 <span class="bento-title">Resume / CV</span>
             </div>
             <p class="bento-desc">Full professional history & education details.</p>
-            <a class="bento-link" href="LINK_DO_CV" target="_blank" rel="noopener">Download <span>→</span></a>
+            <a class="bento-link" href="https://adriankordowski.pl/wp-content/uploads/2026/02/CV-Adrian-Kordowski-English.pdf" target="_blank" rel="noopener">Download <span>→</span></a>
         </article>
 
         <article class="bento-card">
@@ -568,7 +568,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
                 <span class="bento-title">LinkedIn</span>
             </div>
             <p class="bento-desc">Let's connect. Open to networking & opportunities.</p>
-            <a class="bento-link" href="LINK_DO_LINKEDIN" target="_blank" rel="noopener">View Profile <span>→</span></a>
+            <a class="bento-link" href="https://www.linkedin.com/in/adrian-kordowski" target="_blank" rel="noopener">View Profile <span>→</span></a>
         </article>
     </div>
 </div>
