@@ -433,7 +433,6 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
   <div class="container grid-2">
     <div>
       <h2>Who I am</h2>
-      <img class="avatar" loading="lazy" decoding="async" src="" alt="Portrait of Adrian Kordowski" />
       <p>Hello!</p>
       <p>I’m Adrian — a business and data enthusiast who loves turning ideas into actionable plans. During my studies, I led a student science club, organizing meetings with entrepreneurs. We lifted the curtain on the business world and raised funds for children’s homes before Christmas. Those experiences sparked my passion for entrepreneurship and analytics.</p>
       <p>I’m passionate about ESG — <em>Environmental, Social and Governance</em> — not only as a framework for risk and opportunity in investing, but as a way to balance profit with environmental and social impact in practice.</p>
