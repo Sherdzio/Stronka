@@ -543,7 +543,7 @@ p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.6}
                 <span class="bento-title">Resume / CV</span>
             </div>
             <p class="bento-desc">Full professional history & education details.</p>
-            <a class="bento-link" href="LINK_DO_CV" target="_blank" rel="noopener">Download <span>→</span></a>
+            <a class="bento-link" href="https://adriankordowski.pl/wp-content/uploads/2026/02/CV-Adrian-Kordowski-English.pdf" target="_blank" rel="noopener">Download <span>→</span></a>
         </article>
 
         <article class="bento-card">
